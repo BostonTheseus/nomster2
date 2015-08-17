@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
 
 	def index
 		@places = Place.all
-		@posts = Place.paginate(:page => params[:page], :per_page => 10)
+		@posts = Place.paginate(:page => params[:page], :per_page => 2)
 	end
 
 	def new
@@ -13,6 +13,10 @@ class PlacesController < ApplicationController
 	def create
 		current_user.places.create(place_params)
 		redirect_to root_path
+	end
+
+	def show
+		@place = Place.find(params[:id])
 	end
 
 	private
