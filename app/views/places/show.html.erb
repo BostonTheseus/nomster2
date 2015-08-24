@@ -94,6 +94,16 @@
   </div>
 <% end %>
 
+<h1>Images</h1>
+
+<% @place.images.each do |image| %>
+  <div>
+    <blockquote>
+        <%= image.caption %>
+    </blockquote>
+  </div>
+<% end %>
+
 <div class="clear"></div>
 <%= simple_form_for @image, :url => place_images_path(@place) do |f| %>
   <%= f.input :caption %>
