@@ -99,6 +99,7 @@
 <% @place.images.each do |image| %>
   <div>
     <blockquote>
+    	<%= image_tag image.picture %>
         <%= image.caption %>
     </blockquote>
   </div>
