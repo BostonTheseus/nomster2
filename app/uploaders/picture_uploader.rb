@@ -18,9 +18,9 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   uploader = PictureUploader.new
 
-  # uploader.store!(my_file)
+  uploader.store!(my_file)
 
-  # uploader.retrieve_from_store!('my_file.png')
+  uploader.retrieve_from_store!('my_file.png')
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
